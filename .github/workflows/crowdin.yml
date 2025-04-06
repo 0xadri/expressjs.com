@@ -2,7 +2,7 @@ name: Crowdin Action
 
 on:
   push:
-    branches: [ gh-pages ]
+    branches: [ gh-pages, fix-crowdin ]
   workflow_dispatch:
 
 permissions: write-all
@@ -20,7 +20,7 @@ jobs:
         with:
           upload_sources: true
           upload_translations: false
-          download_translations: true
+          download_translations: false
           localization_branch_name: l10n
           create_pull_request: true
           pull_request_title: 'New Crowdin Translations'
